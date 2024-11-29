@@ -22,6 +22,9 @@ interface VmExt {
 
     /// Use a paymaster for the next ZK-VM call.
     function zkUsePaymaster(address paymaster, bytes calldata input) external;
+
+    /// Mark a contract as a factory dependency.
+    function zkUseFactoryDep(string calldata contractName) external;
 }
 
 abstract contract TestExt {
