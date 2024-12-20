@@ -35,7 +35,7 @@ abstract contract CommonBaseExt {
     address internal constant GAS_BOUND_CALLER = 0xc706EC7dfA5D4Dc87f29f859094165E8290530f5;
     address internal constant P256_VERIFY = 0x0000000000000000000000000000000000000100;
     // Used when deploying with create2, https://github.com/matter-labs/era-contracts/blob/main/system-contracts/contracts/Create2Factory.sol.
-    address internal constant CREATE2_FACTORY = 0x0000000000000000000000000000000000010000;
+    address internal constant ZKSYNC_CREATE2_FACTORY = 0x0000000000000000000000000000000000010000;
 
     VmExt internal constant vmExt = VmExt(VM_EXT_ADDRESS);
 }
