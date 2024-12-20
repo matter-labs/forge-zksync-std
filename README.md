@@ -12,6 +12,8 @@ forge install Moonsong-Labs/forge-zksync-std
 
 ## Usage
 
+Test:
+
 ```solidity
 import {Test, console2 as console} from "forge-std/Test.sol";
 import {TestExt} from "forge-zksync-std/TestExt.sol";
@@ -23,6 +25,25 @@ contract FooTest is Test, TestExt {
 
         vmExt.zkVmSkip();               // additional foundry-zksync cheatcodes
         new Contract2();
+    }
+}
+```
+
+Script:
+
+```solidity
+import {Test, console2 as console} from "forge-std/Test.sol";
+import {ScriptExt} from "forge-zksync-std/ScriptExt.sol";
+
+contract FooScript is Script, ScriptExt {
+    function deployTwoUserMultisig() public {
+        Factory factory = new Factory(multisigBytecodeHash);
+
+        // Mark the bytecode as a factory dependency
+        vmExt.zkUseFactoryDep("TwoUserMultisig");
+
+        // Deploy the account using the factory
+        factory.deployAccount(multisigBytecodeHash);
     }
 }
 ```
