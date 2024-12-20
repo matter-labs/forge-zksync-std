@@ -11,6 +11,6 @@ import {ScriptBaseExt} from "./BaseExt.sol";
 
 // ⭐️ SCRIPT
 abstract contract ScriptExt is ScriptBaseExt {
-    // Note: IS_SCRIPT() must return true.
-    bool public IS_SCRIPT = true;
+    // Note: IS_SCRIPT_EXT() must return true.
+    bool public IS_SCRIPT_EXT = true;
 }

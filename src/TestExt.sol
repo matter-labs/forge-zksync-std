@@ -5,6 +5,6 @@ import {TestBaseExt} from "./BaseExt.sol";
 
 // ⭐️ TEST
 abstract contract TestExt is TestBaseExt {
-    // Note: IS_TEST() must return true.
-    bool public IS_TEST = true;
+    // Note: IS_TEST_EXT() must return true.
+    bool public IS_TEST_EXT = true;
 }
