@@ -7,7 +7,7 @@ Forge ZKsync Standard Library is a collection of helpful contracts and libraries
 ## Install
 
 ```bash
-forge install Moonsong-Labs/forge-zksync-std
+forge install matter-labs/forge-zksync-std
 ```
 
 ## Usage
