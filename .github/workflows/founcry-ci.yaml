@@ -1,0 +1,20 @@
+name: Foundry CI
+on: 
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build:
+    name: Build contracts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dutterbutter/foundry-zksync-toolchain@v1
+
+      - name: Format contracts
+        run: forge fmt --check
+
+      - name: Build contracts
+        run: forge build --zksync --zk-enable-eravm-extensions
